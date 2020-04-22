@@ -51,8 +51,20 @@
             <groupId>org.omnifaces</groupId>
             <artifactId>omnifaces</artifactId>
             <version>1.6</version>
-        </dependency>        
+        </dependency>   
+        <dependency>
+            <groupId>alerario</groupId>
+            <artifactId>javainterfaces</artifactId>
+            <version>1.0</version>       
+        </dependency>
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>alerario-repo</id>
+            <url>https://raw.githubusercontent.com/alerario/javainterfaces/master/repositorio</url>
+        </repository>
+    </repositories>
 
     <build>
         <plugins>

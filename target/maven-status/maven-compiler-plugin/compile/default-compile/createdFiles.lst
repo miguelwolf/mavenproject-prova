@@ -2,7 +2,9 @@ br\com\miguelwolf\bean\ClienteBean$1.class
 br\com\miguelwolf\controller\ClienteDAO.class
 br\com\miguelwolf\bean\ClienteBean.class
 br\com\miguelwolf\model\ICidade.class
+br\com\miguelwolf\rest\RestConfig.class
 br\com\miguelwolf\bean\ApplicationConfig.class
 br\com\miguelwolf\model\Cliente.class
+br\com\miguelwolf\rest\ClienteREST.class
 br\com\miguelwolf\model\Cidade.class
 br\com\miguelwolf\model\ICliente.class

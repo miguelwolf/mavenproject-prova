@@ -1,0 +1,1 @@
+java -jar lib/glassfish-4.1.1.jar --deploy target/mavenproject-prova-1.0-SNAPSHOT.war --port $PORT
