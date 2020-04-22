@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Projeto WebServices</title>
+    </h:head>
+    <h:body>
+        <!--        <p:growl life="3000" globalOnly="true" id="globalMsg"
+                         widgetVar="globalMsg" />-->
+
+        <h:form>
+            <h:outputLabel>Nome:</h:outputLabel> 
+            <h:inputText value="#{clienteBean.cliente.nome}"/> <br/>
+
+            <h:outputLabel>Cidade:</h:outputLabel> 
+            <h:selectOneMenu value="#{clienteBean.cliente.cidade}" converter="omnifaces.SelectItemsConverter" >
+                <f:selectItems value="#{clienteBean.mListCidade}" var="cid" itemLabel="#{cid.nome}" 
+                               itemValue="#{cid}" />
+            </h:selectOneMenu>
+
+            <br/><br/>
+
+            <h:commandButton value="ADD" actionListener="#{clienteBean.salvar}"/>
+            <h:commandButton actionListener="#{clienteBean.salvarAdd5}" immediate="true" value="Adicionar aleatoriamente 5 clientes"/>
+
+            <br/><br/><br/>
+
+        </h:form>
+
+        <h:form id="formTable">
+            Lista de clientes cadastrados
+            <h:dataTable value="#{clienteBean.mListCliente}" var="cli">
+                <h:column>
+                    <f:facet name = "header">Cod. cliente</f:facet> 
+                        #{cli.codigo}
+                </h:column>
+
+                <h:column>
+                    <f:facet name = "header">Nome cliente</f:facet> 
+                        #{cli.nome}
+                </h:column>
+
+                <h:column>
+                    <f:facet name = "header">Cod. cidade</f:facet> 
+                        #{cli.cidade.codigo}
+                </h:column>
+
+                <h:column>
+                    <f:facet name = "header">Nome cidade</f:facet> 
+                        #{cli.cidade.nome}
+                </h:column>
+
+            </h:dataTable>
+        </h:form>
+    </h:body>
+</html>
