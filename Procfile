@@ -1,1 +1,1 @@
-web:    java --deploy target/mavenproject-prova-1.0-SNAPSHOT.war --port $PORT
+web:    java -jar lib/payara-micro-5.191.jar --deploy target/mavenproject-prova-1.0-SNAPSHOT.war --port $PORT
