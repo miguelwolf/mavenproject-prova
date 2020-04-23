@@ -1,1 +1,1 @@
-web:    --deploy target/mavenproject-prova-1.0-SNAPSHOT.war --port $PORT
+web:    java --deploy target/mavenproject-prova-1.0-SNAPSHOT.war --port $PORT
