@@ -30,7 +30,7 @@ public class ClienteREST {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Cliente> findAll() {
+    public List<Cliente> getAll() {
         return ClienteDAO.getmListCliente();
     }
 
@@ -49,7 +49,7 @@ public class ClienteREST {
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    public void save(String json) {
+    public void add(String json) {
         try {
             ObjectMapper mapper = new ObjectMapper();
             ClienteDAO.persistir(mapper.readValue(json, Cliente.class));
